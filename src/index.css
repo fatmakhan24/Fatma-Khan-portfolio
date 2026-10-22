@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0a;
+  --color-panel: #141414;
+  --color-brand: #e11d2e;
+  --color-bone: #ffffff;
+  --font-display: "Anton", Impact, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+}
+
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-bone);
+}
+
+.cursor-dot,
+.cursor-ring {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 9999px;
+  opacity: 0;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-brand);
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--color-bone);
+  transition: width 0.2s, height 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.cursor-ring.cursor-hover {
+  width: 50px;
+  height: 50px;
+  background: rgba(225, 29, 46, 0.25);
+  border-color: var(--color-brand);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-dot,
+  .cursor-ring {
+    display: block;
+  }
+  * {
+    cursor: none !important;
+  }
+}
