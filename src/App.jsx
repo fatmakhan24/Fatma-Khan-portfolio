@@ -14,7 +14,7 @@ const PROFILE = {
   github: "https://github.com/fatmakhan24",
   linkedin:
     "https://www.linkedin.com/in/fatma-khan-b18842315/?isSelfProfile=true",
-    instagram:"https://www.instagram.com/fatma_khan24/",
+    instagram:"https://www.instagram.com/fatma_.khan_/",
 };
 
 const SKILLS = [
